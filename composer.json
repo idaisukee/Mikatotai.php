@@ -8,5 +8,10 @@
     ],
     "require": {
       "idaisukee/Sinsituwoka.php": "dev-master"
+    },
+  "autoload": {
+    "psr-4": {
+      "Mikatotai\\": "lib/"
     }
+  }
 }
