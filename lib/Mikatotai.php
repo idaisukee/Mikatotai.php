@@ -58,8 +58,8 @@
 			$showHiddenInvitations = null,
 			$singleEvents = null,
 			$syncToken = null,
-			$timeMax = '2021-06-03T10:00:00-07:00',
-			$timeMin = '2001-06-03T10:00:00-07:00',
+			$timeMax = '2017-06-03T10:00:00-07:00',
+			$timeMin = '2015-06-03T10:00:00-07:00',
 			$timeZone = null,
 			$updatedMin = null
 		)
