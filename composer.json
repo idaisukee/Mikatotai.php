@@ -1,14 +1,14 @@
 {
-	"name": "idaisukee/Mikatotai.php",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/idaisukee/Sinsituwoka.php"
-        }
-    ],
-    "require": {
-      "idaisukee/Sinsituwoka.php": "dev-master"
-    },
+  "name": "idaisukee/Mikatotai.php",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/idaisukee/Sinsituwoka.php"
+    }
+  ],
+  "require": {
+    "idaisukee/Sinsituwoka.php": "dev-master"
+  },
   "autoload": {
     "psr-4": {
       "Mikatotai\\": "lib/"
