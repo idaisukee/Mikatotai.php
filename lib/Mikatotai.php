@@ -44,7 +44,29 @@
 			echo $response->getBody();
 		}
 
-			
+		public function Events_list(
+			$alwaysIncludeEmail = null,
+			$iCalUID = null,
+			$maxAttendees = null,
+			$maxResults = null,
+			$orderBy = null,
+			$pageToken = null,
+			$privateExtendedProperty = null,
+			$q = 'かみ',
+			$sharedExtendedProperty = null,
+			$showDeleted = null,
+			$showHiddenInvitations = null,
+			$singleEvents = null,
+			$syncToken = null,
+			$timeMax = '2021-06-03T10:00:00-07:00',
+			$timeMin = '2001-06-03T10:00:00-07:00',
+			$timeZone = null,
+			$updatedMin = null
+		)
+		{
+			$response = $this->client->request('GET', 'calendars/primary/events');
+			return $response;
+		}
 	}
 
 
