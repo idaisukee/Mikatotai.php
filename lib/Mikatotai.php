@@ -58,14 +58,23 @@
 			$showHiddenInvitations = null,
 			$singleEvents = null,
 			$syncToken = null,
-			$timeMax = '2017-06-03T10:00:00-07:00',
-			$timeMin = '2015-06-03T10:00:00-07:00',
+			$timeMax = '2017-06-03T10:00:00+09:00',
+			$timeMin = '2016-12-03T10:00:00+09:00',
 			$timeZone = null,
 			$updatedMin = null
 		)
 		{
-			$response = $this->client->request('GET', 'calendars/primary/events');
-			return $response;
+			$response = $this->client->request('GET', 'calendars/primary/events', [
+				'query' => [
+					'q' => $q,
+					'timeMax' => $timeMax,
+					'timeMin' => $timeMin,
+				],
+				'headers' => [
+					'Authorization' => 'Bearer '.$this->bearer,
+				],
+			]);
+			return $response->getBody();
 		}
 	}
 
