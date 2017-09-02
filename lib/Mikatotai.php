@@ -44,39 +44,6 @@
 			echo $response->getBody();
 		}
 
-		public function Events_list(
-			$alwaysIncludeEmail = null,
-			$iCalUID = null,
-			$maxAttendees = null,
-			$maxResults = null,
-			$orderBy = null,
-			$pageToken = null,
-			$privateExtendedProperty = null,
-			$q = 'かみ',
-			$sharedExtendedProperty = null,
-			$showDeleted = null,
-			$showHiddenInvitations = null,
-			$singleEvents = null,
-			$syncToken = null,
-			$timeMax = '2017-06-03T10:00:00+09:00',
-			$timeMin = '2016-12-03T10:00:00+09:00',
-			$timeZone = null,
-			$updatedMin = null
-		)
-		{
-			$response = $this->client->request('GET', 'calendars/primary/events', [
-				'query' => [
-					'q' => $q,
-					'timeMax' => $timeMax,
-					'timeMin' => $timeMin,
-				],
-				'headers' => [
-					'Authorization' => 'Bearer '.$this->bearer,
-				],
-			]);
-			return $response->getBody();
-		}
-
 		public function generic(
 			$method,
 			$url,
