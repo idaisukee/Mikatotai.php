@@ -11,4 +11,13 @@
 	use GuzzleHttp\Client;
 
 	$m = new Mikatotai();
-	echo $m->Events_list();
+$url = 'calendars/primary/events';
+
+	$query = [
+		'q' => 'かみ',
+		'timeMax' => '2017-06-03T10:00:00+09:00',
+		'timeMin' => '2016-12-03T10:00:00+09:00',
+	];
+		
+
+echo $m->generic('GET', $url, $query);
