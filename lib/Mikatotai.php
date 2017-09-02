@@ -76,6 +76,21 @@
 			]);
 			return $response->getBody();
 		}
+
+		public function generic(
+			$method,
+			$url,
+			$query
+		)
+		{
+			$response = $this->client->request($method, $url, [
+				'query' => $query,
+				'headers' => [
+					'Authorization' => 'Bearer '.$this->bearer,
+				],
+			]);
+			return $response->getBody();
+		}
 	}
 
 
