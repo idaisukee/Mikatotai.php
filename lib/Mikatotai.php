@@ -25,25 +25,6 @@
 			]);
 		}
 
-		public function CalendarList_list(
-			$maxResults = null,
-			$minAccessRole = null,
-			$pageToken = null,
-			$showDeleted = null,
-			$showHidden = null,
-			$syncToken = null
-		)
-		{
-			$response = $this->client->request('GET', 'users/me/calendarList', [
-				'query' => [
-				],
-				'headers' => [
-					'Authorization' => 'Bearer '.$this->bearer,
-				],
-			]);
-			echo $response->getBody();
-		}
-
 		public function generic(
 			$method,
 			$url,
