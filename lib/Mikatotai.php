@@ -39,8 +39,25 @@
 			]);
 			return $response->getBody();
 		}
+
+		public function Events_insert(
+			$calendar_id,
+			$body
+		)
+		{
+			$url = 'calendars/' . $calendar_id . '/events';
+			$response = $this->client->request('POST', $url, [
+				'headers' => [
+					'Accept' => 'application/json',
+					'Content-type' => 'application/json',
+					'Authorization' => 'Bearer '.$this->bearer,
+				],
+				'body' => $body
+			]);
+			return $response->getBody();
+				//        $command = 'curl -v -H "Accept: application/json" -H "Content-type: application/json" -H "Authorization: Bearer ' . $bearer . '" -X POST -d "' . $escaped_json . '" ' . $endpoint;
+		}
+
+
 	}
-
-
-
 
