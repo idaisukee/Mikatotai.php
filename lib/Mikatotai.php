@@ -55,7 +55,6 @@
 				'body' => $body
 			]);
 			return $response->getBody();
-				//        $command = 'curl -v -H "Accept: application/json" -H "Content-type: application/json" -H "Authorization: Bearer ' . $bearer . '" -X POST -d "' . $escaped_json . '" ' . $endpoint;
 		}
 
 
